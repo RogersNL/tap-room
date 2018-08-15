@@ -4,20 +4,20 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<div ng-app="myApp" ng-controller="customersCtrl">
+<div ng-app="myApp" class="container" ng-controller="customersCtrl">
   <h3>Add a new Keg</h3>
     <form>
       <label for="keg">Keg Name</label>
-      <input [(ngModel)]="kegName" type="text" name="keg">
+      <input class="form-control" [(ngModel)]="kegName" type="text" name="keg">
       <label for="brand">Keg Brand</label>
-      <input [(ngModel)]="kegBrand" type="text" name="brand">
+      <input class="form-control" [(ngModel)]="kegBrand" type="text" name="brand">
       <label for="price">Keg Price</label>
-      <input [(ngModel)]="kegPrice" type="text" name="price">
+      <input class="form-control" [(ngModel)]="kegPrice" type="text" name="price">
       <label for="content">Alcohol Content</label>
-      <input [(ngModel)]="kegContent" type="text" name="content">
+      <input class="form-control" [(ngModel)]="kegContent" type="text" name="content">
       <label for="pints">Pints Left</label>
-      <input [(ngModel)]="kegPints" type="text" name="pints">
-      <button type="button" (click)="submit()">Add</button>
+      <input class="form-control" [(ngModel)]="kegPints" type="text" name="pints">
+      <button type="button" class="btn btn-primary"(click)="submit()">Add</button>
     </form>
   <!-- <div>
     <h3>Select sort method</h3>
@@ -40,22 +40,23 @@
       <td>{{ currentKeg.price}}</td>
       <td>{{ currentKeg.alcoholContent}}</td>
       <td>{{ currentKeg.pintsLeft}}</td>
-      <td><button (click)="editTask(currentKeg)">Edit!</button></td>
+      <td><button class="btn btn-success"(click)="sold(currentKeg)">Sold!</button></td>
+      <td><button class="btn btn-warning"(click)="editTask(currentKeg)">Edit!</button></td>
     </tr>
   </table>
   <div *ngIf="selectedKeg">
     <form>
       <label for="keg">Keg Name</label>
-      <input [(ngModel)]="selectedKeg.name" type="text" name="keg">
+      <input class="form-control" [(ngModel)]="selectedKeg.name" type="text" name="keg">
       <label for="brand">Keg Brand</label>
-      <input [(ngModel)]="selectedKeg.brand" type="text" name="brand">
+      <input class="form-control" [(ngModel)]="selectedKeg.brand" type="text" name="brand">
       <label for="price">Keg Price</label>
-      <input [(ngModel)]="selectedKeg.price" type="text" name="price">
+      <input class="form-control" [(ngModel)]="selectedKeg.price" type="text" name="price">
       <label for="content">Alcohol Content</label>
-      <input [(ngModel)]="selectedKeg.alcoholContent" type="text" name="content">
+      <input class="form-control" [(ngModel)]="selectedKeg.alcoholContent" type="text" name="content">
       <label for="pints">Pints Left</label>
-      <input [(ngModel)]="selectedKeg.pintsLeft" type="text" name="pints">
-      <button type="button" (click)="finishedEditing()">Done</button>
+      <input class="form-control" [(ngModel)]="selectedKeg.pintsLeft" type="text" name="pints">
+      <button type="button" class="btn btn-warning" (click)="finishedEditing()">Done</button>
     </form>
 
 
