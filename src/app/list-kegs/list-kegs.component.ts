@@ -16,4 +16,18 @@ export class ListKegsComponent {
   soldButtonClicked(kegToEdit: Keg) {
     this.clickSold.emit(kegToEdit);
   }
+  pintsLeft(currentKeg:Keg){
+    if(currentKeg.pintsLeft<=0){
+      return "bg-danger";
+    }else if(currentKeg.pintsLeft<=10){
+      return "bg-warning";
+    }else{
+      return "bg-success";
+    }
+  }
+  desiredFilter: string = "allBeer";
+
+  onChange(optionFromMenu) {
+    this.desiredFilter = optionFromMenu;
+  }
 }

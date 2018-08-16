@@ -1,4 +1,9 @@
 <h3>Kegs</h3>
+<select (change)="onChange($event.target.value)">
+  <option value="allKeg" selected>All Beer</option>
+  <option value="lowPints">Less than 10 remaining</option>
+  <option value="lowPrice">Low Price</option>
+</select>
 <table>
   <tr>
     <th>Name</th>
@@ -7,7 +12,7 @@
     <th>Alcohol Content (%)</th>
     <th>Pints Left</th>
   </tr>
-  <tr *ngFor="let currentKeg of childKegList">
+  <tr *ngFor="let currentKeg of childKegList | filter: desiredFilter" [class]="pintsLeft(currentKeg)" >
     <td>{{ currentKeg.name }}</td>
     <td>{{ currentKeg.brand }}</td>
     <td>{{ currentKeg.price}}</td>

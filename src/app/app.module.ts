@@ -9,7 +9,7 @@ import { EditKegComponent } from './edit-keg/edit-keg.component';
 import { SellPintComponent } from './sell-pint/sell-pint.component';
 import { FilterKegsComponent } from './filter-kegs/filter-kegs.component';
 import { ListKegsComponent } from './list-kegs/list-kegs.component';
-
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { ListKegsComponent } from './list-kegs/list-kegs.component';
     EditKegComponent,
     SellPintComponent,
     FilterKegsComponent,
-    ListKegsComponent
+    ListKegsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
