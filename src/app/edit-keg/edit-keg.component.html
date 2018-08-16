@@ -1,0 +1,14 @@
+<div *ngIf="childSelectedKeg">
+  <form>
+    <label for="keg">Keg Name</label>
+    <input class="form-control" [(ngModel)]="childSelectedKeg.name" type="text" name="keg">
+    <label for="brand">Keg Brand</label>
+    <input class="form-control" [(ngModel)]="childSelectedKeg.brand" type="text" name="brand">
+    <label for="price">Keg Price</label>
+    <input class="form-control" [(ngModel)]="childSelectedKeg.price" type="text" name="price">
+    <label for="content">Alcohol Content</label>
+    <input class="form-control" [(ngModel)]="childSelectedKeg.alcoholContent" type="text" name="content">
+    <label for="pints">Pints Left</label>
+    <input class="form-control" [(ngModel)]="childSelectedKeg.pintsLeft" type="text" name="pints">
+    <button type="button" class="btn btn-warning" (click)="finishedEditing()">Done</button>
+  </form>

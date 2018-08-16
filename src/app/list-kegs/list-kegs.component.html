@@ -1,0 +1,19 @@
+<h3>Kegs</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Brand</th>
+    <th>Price</th>
+    <th>Alcohol Content (%)</th>
+    <th>Pints Left</th>
+  </tr>
+  <tr *ngFor="let currentKeg of childKegList">
+    <td>{{ currentKeg.name }}</td>
+    <td>{{ currentKeg.brand }}</td>
+    <td>{{ currentKeg.price}}</td>
+    <td>{{ currentKeg.alcoholContent}}</td>
+    <td>{{ currentKeg.pintsLeft}}</td>
+    <td><button class="btn btn-success"(click)="soldButtonClicked(currentKeg)">Sold!</button></td>
+    <td><button class="btn btn-warning"(click)="editButtonClicked(currentKeg)">Edit!</button></td>
+  </tr>
+</table>

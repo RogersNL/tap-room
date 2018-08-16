@@ -1,0 +1,14 @@
+<h3>Add a new Keg</h3>
+  <form>
+    <label for="keg">Keg Name</label>
+    <input class="form-control" [(ngModel)]="kegName" type="text" name="keg">
+    <label for="brand">Keg Brand</label>
+    <input class="form-control" [(ngModel)]="kegBrand" type="text" name="brand">
+    <label for="price">Keg Price</label>
+    <input class="form-control" [(ngModel)]="kegPrice" type="text" name="price">
+    <label for="content">Alcohol Content</label>
+    <input class="form-control" [(ngModel)]="kegContent" type="text" name="content">
+    <label for="pints">Pints Left</label>
+    <input class="form-control" [(ngModel)]="kegPints" type="text" name="pints">
+    <button type="button" class="btn btn-primary"(click)="submit(kegName, kegBrand, kegPrice, kegContent, kegPints)">Add</button>
+  </form>
