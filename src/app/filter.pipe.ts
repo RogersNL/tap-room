@@ -22,10 +22,11 @@ export class FilterPipe implements PipeTransform {
         if(input[i].price<10){
           output.push(input[i]);
         }
+      }
+      return output;
     }
-    return output;
-  }
-  else{
-    return input;
+    else{
+      return input;
+    }
   }
 }
